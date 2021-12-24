@@ -1,0 +1,49 @@
+NAME: 'CUB_200_2011'
+SEED: 99
+
+FINETUNE_SBERT:
+  DATASET: 'dataset\indo_cub_200_2011_captions.json'
+  MODEL: 'cahya/bert-base-indonesian-522M'
+  # MODEL: 'indolem/indobert-base-uncased'
+  BATCH_SIZE: 16
+  SHUFFLE: true
+  LOSS: 'cosine_similarity'
+  EPOCHS: 10
+  WARMUP_STEP: 100
+  EMBEDDING_DIM: 1024
+  FINAL_MODEL_PATH: 'checkpoints\pretrain_sbert_1024_cahya\indo-sbert.pth'
+  OUTPUT_MODEL_PATH: 'checkpoints\pretrain_sbert_1024_cahya'
+  VALIDATION: 0.1
+  TRIPLET_MARGIN: 1.5
+  POSITIVE:
+    START: 0.8
+    END: 1
+  NEGATIVE:
+    START: 0.4
+    END: 0.6
+
+DATASET:
+  DATASET: 'dataset\indo_cub_200_2011_captions.json'
+  SBERT: 'checkpoints\pretrain_sbert_1024_cahya'
+  TRAIN_FILENAMES: 'dataset\train_filenames.pickle'
+  TEST_FILENAMES: 'dataset\test_filenames.pickle'
+  TRAIN_OUTPUT: 'dataset\train-sbert-embeddings.pickle'
+  TEST_OUTPUT: 'dataset\test-sbert-embeddings.pickle'
+
+TRAIN_FASTGAN:
+  DATASET: 'dataset\birds'
+  SBERT: 'checkpoints\pretrain_sbert_1024_cahya'
+  CHECKPOINT: ''
+  IMAGE_SIZE: 512
+  BATCH_SIZE: 10
+  ITERATIONS: 50000
+  DISCRIMINATOR_SIZE: 64
+  GENERATOR_SIZE: 64
+  Z_SIZE: 100
+  LR: 0.0002
+  SAVE_INTERVAL: 100
+  CA_DIM: 128
+  TEXT_EMB: 1024
+  CONDITIONAL: True
+  NAME: 'example'
+
