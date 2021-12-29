@@ -12,7 +12,7 @@ you can fine-tune the SBERT by the following commands
 python finetune_sbert.py --cfg config/cub_200_2011.yaml
 ```
 
-you will get the pretrained text encoder on `checkpoints` directory or you can download our pretrained [models](https://drive.google.com/file/d/1DlDWMYQmkeHkcJiOxXq4IkBJV8onlQ6G/view?usp=sharing)
+you will get the pretrained text encoder on `checkpoints` directory or you can download our pretrained [models](https://drive.google.com/file/d/1CbfnFOQUpc8wr_mDUrC3JTKW-4xdYYKA/view?usp=sharing)
 
 # Preprocess Dataset
 Next, you need to preprocess the datasets, so the FastGAN can train it. Run the following commands
