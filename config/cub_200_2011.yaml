@@ -47,3 +47,12 @@ TRAIN_FASTGAN:
   CONDITIONAL: True
   NAME: 'example'
 
+TEST:
+  SBERT: ''
+  GAN: ''
+  IMAGE_SIZE: 512
+  GENERATOR_SIZE: 64
+  Z_SIZE: 100
+  CA_DIM: 128
+  TEXT_EMB: 1024
+  OUTPUT: 'generated.jpg'
