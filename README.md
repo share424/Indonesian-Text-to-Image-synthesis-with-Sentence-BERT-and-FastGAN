@@ -1,5 +1,5 @@
 # Indonesian Text-to-Image Synthesis with Sentence-BERT and FastGAN
-This code is implementation of [Indonesian Text-to-Image Synthesis with Sentence-BERT and FastGAN](#) paper.
+This code is implementation of [Indonesian Text-to-Image Synthesis with Sentence-BERT and FastGAN](https://arxiv.org/abs/2303.14517) paper.
 
 # Installation
 1. you can install the dependency using the `requirements.txt` file
